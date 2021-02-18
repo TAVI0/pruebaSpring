@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    <form th:action="@{/login}" th:object="${loginForm}" method="post">
+
+                <label for="legajo">Legajo</label>
+                <input type="text" id="legajo" placeholder="legajo" name="legajo" />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Contraseña"  name="password" />
+
+                <input type="submit" value="login">
+
+    </form>
+<!--
+    <tr th:each="alumn : ${list}">
+        <td th:text="${alumn.idAlumn}">
+        <td th:text="${alumn.password}">
+    </tr>
+-->
+
+</body>
+</html>
